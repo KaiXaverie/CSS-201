@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+        body{
+            background-color: #98a27d;
+            color: #002d33;
+        }
+        /*Descendant selector - space, child selector - >*/
+        #parent > .box-more {
+            height: 20px;
+            border: 2px solid #011619;
+        }
+        /*Adjacent selector (sibling selector) - +, general sibling selector - ~*/
+        #parent .box-more + .box-more {
+            background-color: #b58d5a;
+        }
+        /*Rule that is most specific will have priority, when there is nothing more to specify duplicate simple selectors
+        for example: #myId#myId span {color: yellow;}
+        Only use !important on page-specific CSS that overrides foreign CSS (from external libraries, like Bootstrap)*/
+        #parent .box-more ~ .box-more {
+            background-color: #69b7bf;
+        }
+        /*In a specificity tie, the last rule defined wins*/
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="box-more"></div>
+        <div class="box-more"></div>
+        <div class="box-more"></div>
+        <div class="box-more"></div>
+        <div class="box-more"></div>
+        <div class="box-more"></div>
+    </div>
+    <div class="box-more">This will not be selected</div>
+    <div>
+        <a href="centering.html">Previous Page</a>
+    </div>
+</body>
+</html>
