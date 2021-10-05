@@ -1,0 +1,49 @@
+div {
+    display: inline-block;
+    border: 3px solid #00707c;
+    padding: 10px;
+    margin: 5px;
+}
+.box {
+    border: 2px solid #45a8ae;
+    /*Height and width don't affect padding and border by default, if we want them to be included into a size
+    we should use box-sizing: border-box; it is content-box by default*/
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 30px;
+    /*Outlines are borders around standard borders*/
+    font-size: 40px;
+    /*x y blur color*/
+    text-shadow: 2px 2px 3px #45a8ae;
+    /*If we want text shadow we can do it this way:*/
+    /* color: rgba(165, 107, 107, 0); */
+}
+.outline {
+    outline: 5px solid #1f3334;
+    outline-offset: 10px;
+}
+body {
+    background-color: rgba(158, 184, 181, 255);
+    color: #1f3334;
+}
+.width {
+    border: 4px solid #45a8ae;
+    display: inline-block;
+    min-width: 450px;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {    
+    position: fixed;
+}
+.sticky {
+    position: sticky;
+}
