@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+         body {
+            background-color: rgba(158, 184, 181, 255);
+            color: #45a8ae;
+            margin: 0;
+            padding: 0;
+            height: 3000px;
+        }
+        .new-box {
+            background-color: #1f3334;
+            border-bottom: 2px solid #00707c;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .move {
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--Fixed positioning sticks an element to the certain part of your viewport
+    and slides down the element with a page as the page moves down-->
+    <div class="new-box">
+        This is a header
+    </div><br>
+    <div class="move">Hello</div>
+    <a href="absolutepositioning.html">Previous Page</a>
+    <a href="stickypositioning.html">Next Page</a>
+</body>
+</html>

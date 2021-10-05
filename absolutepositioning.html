@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+        .box-one {
+            width: 300px;
+            height: 300px; 
+            border: 3px solid #1f3334;
+            /*If we remove this position: relative; our second box will move to the right
+            and take up 50% of the width and 50% of the height of the viewport*/
+            position: relative;
+        }
+        /*Absolute moves it absolute to the element*/
+        .second-box {
+            /*If we want element to be absolute position his parent's position must be relative*/
+            position: absolute;
+            /* border: 3px solid #1f3334; */
+            /*We have moved this box somewhere where it doesn't live naturally*/
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 50%;
+            background: #1f3334;
+        }
+        body {
+            background-color: rgba(158, 184, 181, 255);
+            color: #45a8ae;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-one">
+        <div class="second-box">Top right</div>
+    </div>
+    <a href="relativepositioning.html">Previous Page</a>
+    <a href="fixedpositioning.html">Next Page</a>
+</body>
+</html>
