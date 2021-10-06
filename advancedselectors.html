@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+        body {
+            background-color: #98a27d;
+            color: #002d33;
+        }
+        .im-box {
+            height: 20px;
+            border: 1px solid #011619;
+        }
+        /*After the sign (:) there should not be whitespace*/
+        .im-box:not(.dontselectme){
+            background-color: #b58d5a;
+        }
+         /*This will select all the classes of im-box and when you hover over it will change background-color*/
+         .im-box:hover {
+            background-color: #69b7bf;
+        }
+        /*It will go from top to the bottom so make sure to apply last what you want to be seen
+        If we first type .im-box:hover we will not be able to see it because .im-box:not(.dontselectme) will override it*/
+        .im-box:nth-child(5) {
+            /*This will select fifth child
+            We use nth-child when we don't want to touch the HTML*/
+            background-color: #011619;
+            color: #98a27d;
+        }
+    </style>
+</head>
+<body>
+    <!--Pseudo classes are a way to link states-->
+    <h1>Pseudo selectors</h1>
+    <!--We can control the styling when we hover over an element, that is pseudo selector or pseudo class-->
+    <div id="parent-one">
+        <div class="im-box"></div>
+        <div class="im-box"></div>
+        <div class="im-box dontselectme"></div>
+        <div class="im-box"></div>
+        <div class="im-box">SELECT ME</div>
+        <div class="im-box"></div>
+        <div class="im-box"></div>
+    </div>
+    <div>
+        <a href="selectors.html">Previous Page</a>
+    </div>
+</body>
+</html>
