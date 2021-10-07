@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+        body {
+            background-color: #98a27d;
+            color: #002d33;
+        }
+        /*Target the p element and then first letter of it*/
+        p::first-letter {
+            font-size: 50px;
+            /*THe rest of the content will wrap around this*/
+            float: left;
+            margin: 5px;
+        }
+        /*It will apply at the first line in browser, not in our editor, it's more responsive*/
+        p::first-line {
+            font-weight: bold;
+        }
+        /*Any time when you do any sort of selection apply this*/
+        ::selection {
+            background-color:#002d33;
+            color: white;
+        }
+        a {
+            background-color: #98a27d;
+            display: inline-block;
+            padding: 5px 15px;
+            color: #002d33;
+            text-decoration: none;
+            border: 2px solid #011619;
+            /*First parameter is what we want to transition and the second one is how long it should take*/
+            transition: background-color .2s,
+                        color .5s,
+                        padding 1s;
+        }
+        a:hover {
+            background-color: #002d33;
+            color: #98a27d;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae architecto, atque eaque quaerat iste similique error voluptatem autem, vitae maxime esse incidunt sint ab optio totam corporis? Porro, excepturi asperiores.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit eius dignissimos officiis, esse nisi ut voluptates impedit nesciunt laborum quisquam eveniet excepturi consectetur porro voluptate adipisci, molestiae aliquam rerum.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam doloribus itaque dolores quidem error, fugiat qui soluta hic, repellat consequatur voluptatem pariatur distinctio, corrupti repudiandae. Deserunt voluptate vitae autem quam.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est itaque quia ex molestiae numquam consequuntur distinctio ab reprehenderit, soluta hic quaerat culpa corporis. Quasi consequatur labore unde impedit ex reprehenderit!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus recusandae assumenda dignissimos harum in alias et illum, deserunt commodi nostrum, dolore, excepturi quae beatae repudiandae aperiam. Fuga, veniam nihil? Excepturi.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae architecto, atque eaque quaerat iste similique error voluptatem autem, vitae maxime esse incidunt sint ab optio totam corporis? Porro, excepturi asperiores.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit eius dignissimos officiis, esse nisi ut voluptates impedit nesciunt laborum quisquam eveniet excepturi consectetur porro voluptate adipisci, molestiae aliquam rerum.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam doloribus itaque dolores quidem error, fugiat qui soluta hic, repellat consequatur voluptatem pariatur distinctio, corrupti repudiandae. Deserunt voluptate vitae autem quam.
+
+    </p>
+    <a href="#" class="button">Click me</a>
+    <a href="pseudoelements.html">Previous Page</a>
+    <a href="gradientback.html">Next Page</a>
+</body>
+</html>
