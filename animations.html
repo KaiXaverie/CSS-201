@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+         body {
+            background-color: #98a27d;
+         }
+        /*Animations let us move things in this smooth and controlled way*/
+        .box-ily {
+            width: 300px;
+            height: 300px;
+            border: 10px solid #002d33;
+            background-color: #002d33;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: slideMe; /*Here we add animation to the element*/
+            animation-duration: 4s; /*Wa want its duration to be 4 seconds*/
+            animation-iteration-count: infinite; /*If we want it to repeat infinitely*/
+            animation-direction: alternate; /*If we add alternate it will go right and come back*/
+            z-index: -1;
+        }
+        /* @keyframes slideMe {
+            from {
+                top: 0;
+                left: 0;
+            }
+            to {
+                left: 100%;
+            }
+        } */
+        @keyframes slideMe {
+            /*% is related to duration*/
+            0% {
+                top: 0;
+                left: 0;
+            }
+            /*50% in this case means 2 seconds*/
+            50% {
+                background-color: #69b7bf;
+            }
+            100% {
+                background-color: #b58d5a;
+                left: 100%;
+            } /*If we want it to move across the screen we need to take 0%*, 25%, 50%, 75%, 100%*/
+        }
+        a {
+            z-index: 1;
+            color: #005862;
+            position: relative;
+            top: 350px;
+            transition: background-color 1s,
+                        color .8s,
+                        padding 1s;
+        }
+        a:hover {
+            background-color: #001619;
+            color: #51a0ad;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--We can make things move without trigger using an animation-->
+    <div class="box-ily"></div>
+    
+    <a href="transformations.html">Previous Page</a>
+    <a href="layering.html">Next Page</a>
+</body>
+</html>

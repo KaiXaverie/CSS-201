@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+        body {
+            background-color: #98a27d;
+            color: #002d33;
+        }
+        * { /*This means take everything on our page*/
+            box-sizing: border-box;
+        }
+        #container {
+            display: flex;
+            /*This says, if anything goes over 100% just bump it down onto a new line*/
+            flex-wrap: wrap;
+        }
+        /* #container div { */
+            /* border: 2px solid #002d33; */
+            /*This says start at 50% but if one element needs more space other will shrink*/
+            /* flex-basis: 20%; */
+            /*This says that the flex-basis or left column will always be at least 50%*/
+            /* flex-shrink: 0;
+            flex-grow: 0; */
+        
+        /*Class="right" is deleted, if you want this to work add class="right" to the div*/
+        /*#container div.right {
+            -Because flex-shrink and flex-grow are set to be 0, 
+            right will be 90% of the viewport width but will go to 
+            the part of the page we can't see by default-
+            flex-basis: 75%;
+        }*/
+        .navigation {
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        .content {
+            flex-basis: 80%;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        #link {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #link a {
+            /* border: 2px solid #002d33; */
+            color: #002d33;
+        }
+        .left-side {
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        .right-side {
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        #link a:hover {
+            background-color: #002d33;
+            color: #98a27d;
+        }
+        .header {
+            flex-basis: 100%;
+            flex-grow: 1;
+            flex-shrink: 0;
+            background-color: #002d33;
+            color: #98a27d;
+            padding: 20px;
+            border-bottom: 2px solid #002d33;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <!--Flexbox is a layout module that makes it easier to design flexible 
+        responsive layout structures without using float, tables etc.-->
+    <div id="container">
+        <!-- <div>Left</div>
+        <div>Center</div>
+        <div>Right</div> -->
+        <div class="header">Header</div>
+        <div class="navigation">Navigation</div>
+        <div class="content">
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi voluptate, ratione iusto nisi numquam, perferendis ea harum officiis ut veritatis veniam deleniti ex quasi unde eaque doloribus nobis. Dignissimos.</p>
+            <h3>Hello world again</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit ipsam ut, eos neque et, obcaecati provident necessitatibus harum id ipsum doloribus repellendus repellat voluptatibus tempore, velit error. Quia, repudiandae.</p>
+        </div>
+    </div>
+    <div id="link">
+        <a class="left-side" href="animations.html">Previous Page</a>
+        <a class="right-side" href="">Next Page</a>
+    </div>
+</body>
+</html>
