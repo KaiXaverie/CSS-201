@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+    <style>
+        body {
+            background-color: #98a27d;
+            color: #002d33;
+        }
+        /*Grid is more advanced than flexbox, it's specifically designed 
+        to be good at making page layouts*/
+        * {
+            box-sizing: border-box;
+        }
+        /*Flexbox has purpose to vertically align things
+        Grid is for a template layout*/
+        #grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /*This will make a gap between our columns
+            If we write grid-row-gap it will create a gap between rows*/
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+        .item {
+            border: 1px solid #002d33;
+        }
+        .item1, .item7 {
+            /*This will now be a header, it will take up whole space at the top*/
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        /*Now we will merge two rows together*/
+        .item6 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .item4, .item5 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        a {
+            position: relative;
+            top: 10px;
+            color: #002d33;
+        }
+    </style>
+</head>
+<body>
+    <!--There are columns, rows and these gutters, we call them gaps
+    In frameworks like bootstrap, you're going to see them called gutter
+    We've got columns, rows and gaps between the columns and rows-->
+    <div id="grid">
+        <!--Grid is good to use for image layout-->
+        <div class="item item1">Header</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">Footer</div>
+    </div>
+    <a href="layering.html">Previous Page</a>
+    <a href="finalproject.html">Final Project</a>
+</body>
+</html>
